@@ -25,3 +25,6 @@ const tagdata = [
     tag_name:'wrestling',
 
 }]
+
+const seedstags = () => tagdata.bulkcreate(tagdata);
+module.exports = seedstags;
