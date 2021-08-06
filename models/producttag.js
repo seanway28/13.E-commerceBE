@@ -38,5 +38,5 @@ tag_id: {
 },
 modelName, 'ProductTag',
 
-
 )
+module.exports = ProuctTag;
