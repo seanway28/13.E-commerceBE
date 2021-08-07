@@ -84,13 +84,13 @@ router.post('/',(req, res) =>{
         }
         //if there are no product tags, respond
         res,status(200).json(product);
-    }
+    })
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
     });
-    });
+    ;
 
     // update product
 router.put('/:id', (req, res) => {
@@ -117,4 +117,22 @@ const newProductTags = req.body.taglds
         tag_id,
       };
     });
+// Find out which ones to remove
+const productTagsToRemove = productTags
+.filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
+.map(({ id }) => id);
+
+// Run both Actions
+return Promise_all([
+    ProductTag.destroy({where: {id: productTagsToRemove}}),
+    ProductTag.bulkCreate(newProductTags),
+]);
+})
+
+.then((updatedProductTags) => res.json(updatedProductTags))
+.catch((err) => {
+  // console.log(err);
+  res.status(400).json(err);
+});
+});
 
