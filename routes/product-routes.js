@@ -71,7 +71,50 @@ router.post('/',(req, res) =>{
        stock: req.body.stock, 
        taglds: req.body.taglds
    })
-
+   .then(product) ; {
+        //If there are product tags, we need to create pairings to bulk create in the productTag model
+        if (req.body.taglds.length){
+            const productTagldArr = req.body.taglds.map((tag_id) =>{
+                return {
+            product_id: product.id,
+            tag_id,
+                };
+            });
+            return ProductTag.bulkCreate(productTagldArr);
+        }
+        //if there are no product tags, respond
+        res,status(200).json(product);
     }
-)
-;
+    .then((productTagIds) => res.status(200).json(productTagIds))
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json(err);
+    });
+    });
+
+    // update product
+router.put('/:id', (req, res) => {
+    // update product data
+  Product.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+})
+.then((product) => {
+    // find all associated tags from ProductTag
+    return ProductTag.findAll({ where: { product_id: req.params.id } });
+  })
+  .then((productTags) => {
+
+//get a list of current tag_ids
+const productTaglds = productTags = productTags.map(({ tag_id})=>tag_id);
+//create filtered list of new tag_id
+const newProductTags = req.body.taglds
+.filter((tag_id)=>!productTaglds.includes(tag_id))
+.map((tag_id)=>{
+    return {
+        product_id: req.params.id,
+        tag_id,
+      };
+    });
+
