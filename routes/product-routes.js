@@ -82,10 +82,12 @@ router.post('/',(req, res) =>{
             });
             return ProductTag.bulkCreate(productTagldArr);
         }
-        //if there are no product tags, respond
-        res,status(200).json(product);
-    })
+        // If there are no product tags, respond
+        res.status(200).json(product);
+   })
+
     .then((productTagIds) => res.status(200).json(productTagIds))
+
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
@@ -135,4 +137,26 @@ return Promise_all([
   res.status(400).json(err);
 });
 });
+
+router.delete('/:id', (req, res) =>{
+    // Delete one product by it's 'id' value
+    Product.destroy({
+        where:{
+            id: req.paramas.id
+        }
+})
+.then(dbProductData => {
+    if (!dbProductData) {
+      res.status(400).json({ message: 'No product with that id found'});
+      return;
+    }
+    res.json(dbProductData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+module.exports = router;
 
