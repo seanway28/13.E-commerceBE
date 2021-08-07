@@ -81,10 +81,10 @@ router.post('/',(req, res) =>{
                 };
             });
             return ProductTag.bulkCreate(productTagldArr);
-        }
+        } 
         // If there are no product tags, respond
         res.status(200).json(product);
-   })
+   }
 
     .then((productTagIds) => res.status(200).json(productTagIds))
 
@@ -159,4 +159,4 @@ router.delete('/:id', (req, res) =>{
 });
 
 module.exports = router;
-
+})
