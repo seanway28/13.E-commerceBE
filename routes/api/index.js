@@ -3,11 +3,9 @@ const categoryRoutes = require('./category-routes');
 const productRoutes = require('./product-routes');
 const tagRoutes = require('./product-routes');
 
-router.use('/categories', category-Routes);
-
-router.search('/products',product-Routes);
-
-router.use('/tags',tagRoutes);
+router.get('/', function(req, res, next) {
+    res.render('index', { title: "Express"})
+});
 
 
 module.exports = router;
