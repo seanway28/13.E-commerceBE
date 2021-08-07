@@ -75,7 +75,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // update a tag's name by its `id` value
+  // Update a tag's name by its `id` value
   Tag.update(req.body, {
     where: {
       id: req.params.id
@@ -94,3 +94,10 @@ router.put('/:id', (req, res) => {
   });
 });
 
+router.post('/', (req, res) => {
+  // Create new tag
+
+Tag.create({
+  tag_name: req.body
+})
+)

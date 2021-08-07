@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/seanway28/13.E-commerceBE/issues"
   },
-  "homepage": "https://github.com/seanway28/13.E-commerceBE#readme"
+  "homepage": "https://github.com/seanway28/13.E-commerceBE#readme",
+  "dependencies": {
+    "express-handlebars": "^5.3.3"
+  }
 }
