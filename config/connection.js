@@ -1,6 +1,6 @@
 require('dotenv').config();
 require('mysql2');
-const Sequelize=require('sequelize');
+const Sequelize = require('sequelize');
 
 // const sequelize = process.env.DB_URL
 // new Sequelize(process.env.DB_URL);
@@ -22,5 +22,7 @@ async function testAuthentication() {
         console.log('unable to connect to database: ', error);
     }
 }
+
+testAuthentication();
 
 module.exports = { sequelize, testAuthentication} ;

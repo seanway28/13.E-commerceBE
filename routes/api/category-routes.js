@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const {Category, Product} = require('../../models');
 
+const { testAuthentication, Sequelize } = require("../config/connection");
+
 //The '/api/categories' endpoint
 Product,  then(dbCategoryData => res.json(dbCategoryData))
   .catch(err => {

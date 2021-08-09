@@ -1,10 +1,11 @@
 // import models
-const Product = require('./product');
+const Product = require('./Product');
 const Category = require('./category');
 const Tag = require('./tag');
 const ProductTag = require('./productTag');
-const { Sequelize } = require('../config/connection');
- 
+const { sequelize } = require('../config/connection');
+const { testAuthentication, sequelize } = require("../config/connection");
+
 //Products belongs to Category
 Product.belongsTo(Category,{
     foreignKey:'category_id'
