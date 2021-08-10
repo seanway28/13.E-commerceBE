@@ -26,5 +26,5 @@ const tagdata = [
 
 }]
 
-const seedstags = () => tagdata.bulkcreate(tagdata);
+const seedstags = () => Tag.bulkCreate(tagdata);
 module.exports = seedstags;

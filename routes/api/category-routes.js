@@ -2,14 +2,14 @@ const router = require('express').Router();
 const { sequelize } = require('../../config/connection');
 const {Category, Product} = require('../../models');
 
-const { testAuthentication, Sequelize } = require("../config/connection");
+// const { testAuthentication, Sequelize } = require("../config/connection");
 
 //The '/api/categories' endpoint
-Product,  then(dbCategoryData => res.json(dbCategoryData))
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+// Product,  then(dbCategoryData => res.json(dbCategoryData))
+//   .catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   });
 
   router.get('/id',(req, res)=>{
  //find one category by it's 'id' value

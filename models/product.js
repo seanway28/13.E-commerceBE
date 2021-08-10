@@ -4,7 +4,7 @@ const { Model, DataTypes } = require("sequelize");
 
 //import our database connection from config.js
 
-const { testAuthentication, sequelize } = require("../config/connection");
+const sequelize = require("../config/connection");
 
 //initialize Product model (table) by extending off sequalizer model class
 
@@ -37,12 +37,14 @@ Product.init(
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 10,
       validate: {
         isNumeric: true,
       },
     },
     category_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         mode: "category",
         key: "id",
@@ -50,7 +52,7 @@ Product.init(
     },
   },
   {
-    sequelize: sequelize, 
+    sequelize, 
     timestamps: false,
     freezeTableName: true,
     underscored: true,

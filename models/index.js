@@ -3,11 +3,12 @@ const Product = require('./Product');
 const Category = require('./category');
 const Tag = require('./tag');
 const ProductTag = require('./productTag');
-const { testAuthentication, sequelize } = require("../config/connection");
+// const { testAuthentication, sequelize } = require("../config/connection");
 
 //Products belongs to Category
 Product.belongsTo(Category,{
-    foreignKey:'category_id'
+    foreignKey:'category_id',
+    onDelete: 'CASCADE'
 });
 
 //Categories have many Products
@@ -25,11 +26,11 @@ Product.belongsToMany(Tag, {
 //Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
     through: ProductTag, 
-    foreignKey: 'Tag_id',
+    foreignKey: 'tag_id',
 
 });
 
-sequelize: sequelize;
+// sequelize: sequelize;
 
 
 module.exports = {Product, Category,Tag,ProductTag,

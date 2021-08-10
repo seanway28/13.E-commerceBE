@@ -1,12 +1,12 @@
 const seedCategories = require('./category-seeds');
 const seedProducts = require('./product-seeds');
-const seeTags = require('./tag-seeds');
+const seedTags = require('./tag-seeds');
 const seedProductTags = require('./product-tag-seeds');
 
-const sequilize = require('../config/connection');
+const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-    await sequilize.sync({ force: true});
+    await sequelize.sync({ force: true});
 
     console.log('\n---database synced---\n');
     

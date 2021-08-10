@@ -7,22 +7,21 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW,{
     host: 'localhost',
     dialect:'mysql',
-    dialectModule: 'mysql2',
     dialectOptions:{
         decimalNumbers: true,
     },
 });
 
 // console.log(sequelize)
-async function testAuthentication() {
-    try {
-        await sequelize.authenticate();
-        console.log('db connection established')
-    } catch (error) {
-        console.log('unable to connect to database: ', error);
-    }
-}
+// async function testAuthentication() {
+//     try {
+//         await sequelize.authenticate();
+//         console.log('db connection established')
+//     } catch (error) {
+//         console.log('unable to connect to database: ', error);
+//     }
+// }
 
-testAuthentication();
-sequelize: sequelize;
-module.exports = { sequelize, testAuthentication} ;
+// testAuthentication();
+// sequelize: sequelize;
+module.exports = sequelize;
