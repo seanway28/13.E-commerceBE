@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { sequelize } = require('../../config/connection');
 const {Category, Product} = require('../../models');
 
 const { testAuthentication, Sequelize } = require("../config/connection");
@@ -81,5 +82,7 @@ res.json(dbCategoryData);
     res.status(500).json(err);
   });
 });
+
+sequelize: sequelize;
 
 module.exports = router;

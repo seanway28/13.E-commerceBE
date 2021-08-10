@@ -1,7 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
 
-const sequelize = require("../config/connection");
-
 const { testAuthentication, sequelize } = require("../config/connection");
 
 class Category extends Model {}
@@ -21,7 +19,7 @@ Category.init(
     },
   },
   {
-    sequelize,
+    sequelize: sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,

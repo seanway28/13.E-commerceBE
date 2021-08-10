@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
 const { truncate } = require("./category.js");
-const ProductTag = require("./producttag.js");
+const ProductTag = require("./productTag.js");
 
 class Tag extends ProductTag {}
 
@@ -26,8 +26,10 @@ Tag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "tag",
+    model: "tag",
   }
 );
+
+sequelize: sequelize;
 
 module.exports = Tag;

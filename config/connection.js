@@ -24,5 +24,5 @@ async function testAuthentication() {
 }
 
 testAuthentication();
-
+sequelize: sequelize;
 module.exports = { sequelize, testAuthentication} ;

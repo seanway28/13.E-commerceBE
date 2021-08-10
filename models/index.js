@@ -3,7 +3,6 @@ const Product = require('./Product');
 const Category = require('./category');
 const Tag = require('./tag');
 const ProductTag = require('./productTag');
-const { sequelize } = require('../config/connection');
 const { testAuthentication, sequelize } = require("../config/connection");
 
 //Products belongs to Category
@@ -30,7 +29,7 @@ Tag.belongsToMany(Product, {
 
 });
 
-
+sequelize: sequelize;
 
 
 module.exports = {Product, Category,Tag,ProductTag,

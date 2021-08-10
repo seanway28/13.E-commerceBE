@@ -15,7 +15,7 @@ ProductTag.init(
       type: DataTypes.INTEGER,
       allowNULL: false,
       references: {
-        modell: "product",
+        model: "product",
         key: "id",
       },
     },
@@ -27,12 +27,15 @@ ProductTag.init(
         key: "id",
       },
 
-      sequelize,
+      sequelize: sequelize, 
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: "product_tag",
-    },
-  },
+      model: "product_tag",
+    }, 
+
+    
+    sequelize: sequelize},
+
 );
 module.exports = ProductTag;
