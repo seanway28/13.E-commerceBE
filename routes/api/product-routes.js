@@ -15,6 +15,43 @@ router.get('/', (req, res) => {
     ]
   }).then(allProducts => res.json(allProducts))
 })
+
+router.get("/:id", (req, res) => {
+  Product.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [Category,
+    {
+      model: Tag,
+      through: ProductTag
+    }]
+  }).then(response => res.json(response))
+})
+
+router.post('/', (req, res) => {
+  Product.create(req.body)
+    .then(newProd => res.json(newProd))
+})
+
+router.put('/:id', (req, res) => {
+  Product.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  }).then(upCat => res.json(upCat))
+})
+
+router.delete('/:id', (req, res) => {
+  Product.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(delCat => res.json(delCat))
+})
+
+module.exports = router;
+
 // router.get('/'),(req, res) =>{
 //     //find all products
 //     //be sure to include its associated Category and Tag data
