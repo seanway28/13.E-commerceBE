@@ -41,7 +41,7 @@ Follow the steps below for installing this particular project:
 (5) From the command line, enter the MySQL shell using mysql -u root -p
 
 
-(6) Inside the <ySQL shell run source db/schema.sql to create the database
+(6) Inside the MySQL shell run source db/schema.sql to create the database
 
 
 (7) Exit the MySQL shell (using "quit") to return to the command line. Proceed to run npm run seed to polulate the tables and data 
@@ -60,4 +60,4 @@ Follow the steps below for installing this particular project:
 Usage
 
 
-To commence running the application, navigate to the folder where you have your cloned
+To commence running the application, navigate to the folder where the application has been cloned on your computer. Proceed to follow steps 7 & 8 from the Installtion Steps to load the data and start the server. From there, navigate to Insomnia Core to use it to make API requests as needed. Please see the examples further down to see what they will look like in Insomnia!
