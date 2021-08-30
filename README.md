@@ -51,6 +51,14 @@ Follow the steps below for installing this particular project:
 
 
 
+![13Insomnia](https://user-images.githubusercontent.com/81600120/131415514-ded3bc6e-668a-478b-8dbb-db8cd9df7d47.PNG)
+
+
+
+
+Starter Code!
+
+
 
 // https://github.com/coding-boot-camp/fantastic-umbrella
 
@@ -60,4 +68,4 @@ Follow the steps below for installing this particular project:
 Usage
 
 
-To commence running the application, navigate to the folder where the application has been cloned on your computer. Proceed to follow steps 7 & 8 from the Installtion Steps to load the data and start the server. From there, navigate to Insomnia Core to use it to make API requests as needed. Please see the examples further down to see what they will look like in Insomnia!
+To commence running the application, navigate to the folder where the application has been cloned on your computer. Proceed to follow steps 7 & 8 from the Installtion Steps to load the data and start the server. From there, navigate to Insomnia Core to use it to make API requests as needed. Please see the example above to see what they will look like in Insomnia Core!
