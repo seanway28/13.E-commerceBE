@@ -2,7 +2,7 @@
 
 Description
 
-This application provides the framework for maintaining and updating an e-commerce site from the back end. This application uses MySQL and Sequelize for trusted, efficient creation and maintenance of the datanase for the front-end site going forward.
+This application provides the framework for maintaining and updating an e-commerce site from the back end. This application uses MySQL and Sequelize for trusted, efficient creation and maintenance of the database for the front-end site going forward.
 
 Table of Contents
 
