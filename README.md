@@ -1,6 +1,8 @@
 # 13.E-commerceBE
 
-Description
+
+
+## Description
 
 This application provides the framework for maintaining and updating an e-commerce site from the back end. This application uses MySQL and Sequelize for trusted, efficient creation and maintenance of the database for the front-end site going forward.
 
@@ -18,10 +20,12 @@ Table of Contents
 
 
 
+![13Insomnia](https://user-images.githubusercontent.com/81600120/131415514-ded3bc6e-668a-478b-8dbb-db8cd9df7d47.PNG)
 
 
 
-Installation
+
+## Installation
 
 Follow the steps below for installing this particular project:
 
@@ -51,28 +55,44 @@ Follow the steps below for installing this particular project:
 
 
 
-![13Insomnia](https://user-images.githubusercontent.com/81600120/131415514-ded3bc6e-668a-478b-8dbb-db8cd9df7d47.PNG)
+## Challenge 13 Walkthrough
+
+
+### Full Walkthrough 
+
+
+https://drive.google.com/file/d/1ybiofFS6WIOhmgQjJas8pfsxFSn0LvKC/view
+
+
+
+### Strictly Server / Seed / Insomnia connecting and running
+
+https://drive.google.com/file/d/14O1_ZmT2LbUZeUOnAQoHWbljwsmIcLaW/view
 
 
 
 
-Starter Code!
+## Starter Code!
 
 
 
-// https://github.com/coding-boot-camp/fantastic-umbrella
+https://github.com/coding-boot-camp/fantastic-umbrella
 
 
 
 
-Usage
+## Usage
 
 
 To commence running the application, navigate to the folder where the application has been cloned on your computer. Proceed to follow steps 7 & 8 from the Installtion Steps to load the data and start the server. From there, navigate to Insomnia Core to use it to make API requests as needed. Please see the example above to see what they will look like in Insomnia Core!
 
 
+## Contact 
 
-License
+For questions or comments about this challenge, please email me at : seanway28@gmail.com
+
+
+### License
 
 MIT License
 
